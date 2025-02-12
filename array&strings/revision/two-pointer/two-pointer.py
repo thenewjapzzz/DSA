@@ -1,5 +1,5 @@
 class Solution:
-    def reverseWords_manual(self, s):
+    def reverseWords(self, s):
         res = ''
         l, r = 0, 0
         while r < len(s):
@@ -9,11 +9,10 @@ class Solution:
                 res += s[l:r+1][::-1]
                 r += 1
                 l = r
-            
+        
         res += ' '
         res += s[l:r+2][::-1]
         return res[1:]
 
-
 solution = Solution()
-print(solution.reverseWords_manual('rac tra'))
+print(solution.reverseWords('rac tra'))
